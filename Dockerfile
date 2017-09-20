@@ -7,10 +7,10 @@ RUN apt-get update && \
 	apt-get -y dist-upgrade && \
 	locale-gen en_US.UTF-8 && \
 	export LANG=en_US.UTF-8
-RUN apt-get install -y vim screen wget git curl re2c autoconf build-essential libxml2-dev wget libbz2-dev  libjpeg-turbo8-dev libpng-dev libmcrypt-dev libmysqlclient-dev libpq-dev libicu-dev libfreetype6-dev libldap2-dev libxslt-dev pkg-config libsslcommon2-dev libssl-dev libc-client-dev libkrb5-dev libldb-dev libpspell-dev libxpm-dev librecode-dev libtidy-dev libgmp-dev libltdl-dev libreadline6-dev apache2 apache2-dev libcurl4-openssl-dev
+RUN apt-get install -y vim screen wget git curl re2c autoconf build-essential libxml2-dev wget libbz2-dev libjpeg-turbo8-dev libpng-dev libmcrypt-dev libmysqlclient-dev libpq-dev libicu-dev libfreetype6-dev libldap2-dev libxslt-dev pkg-config libsslcommon2-dev libssl-dev libc-client-dev libkrb5-dev libldb-dev libpspell-dev libxpm-dev librecode-dev libtidy-dev libgmp-dev libltdl-dev libreadline6-dev apache2 apache2-dev libcurl4-openssl-dev
 RUN cd /tmp && \
 	wget http://in1.php.net/distributions/php-5.3.29.tar.bz2 && \
-	tar -xvf php-5.3.29.tar.bz2 && \
+	tar -xf php-5.3.29.tar.bz2 && \
 	cd /tmp/php-5.3.29 && \
 	ln -sf /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h && \
 	ln -sf /usr/lib/x86_64-linux-gnu/libXpm.so /usr/lib/ && \
