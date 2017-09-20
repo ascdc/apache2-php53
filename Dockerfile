@@ -3,7 +3,9 @@ MAINTAINER ASCDC <asdc.sinica@gmail.com>
 
 ADD run.sh /run.sh
 
-RUN DEBIAN_FRONTEND=noninteractive && apt-get -qq update && \
+RUN DEBIAN_FRONTEND=noninteractive && \
+	chmod +x /run.sh && \
+	apt-get -qq update && \
 	apt-get -y -qq dist-upgrade && \
 	locale-gen en_US.UTF-8 && \
 	export LANG=en_US.UTF-8
