@@ -37,7 +37,6 @@ RUN DEBIAN_FRONTEND=noninteractive && cd /tmp && \
 	make install && \
 	rm -rf /tmp/*
 RUN DEBIAN_FRONTEND=noninteractive && \
-	ln -sf ../mods-available/auth_digest.load /etc/apache2/mods-enabled/ && \
 	ln -sf ../mods-available/authn_anon.load /etc/apache2/mods-enabled/ && \
 	ln -sf ../mods-available/authn_dbm.load /etc/apache2/mods-enabled/ && \
 	ln -sf ../mods-available/authz_owner.load /etc/apache2/mods-enabled/ && \
